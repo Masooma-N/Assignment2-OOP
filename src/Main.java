@@ -66,7 +66,7 @@ public class Main {
                 int quantity = v.getQuantity();
                 if (quantity > 0) {
                     v.setQuantity(quantity - 1);
-                    System.out.println("The vehicle " + v.getVehicleType() + " has been purchased.");
+                    System.out.println("The Vehicle \"" + v.getVehicleType() + " " + v.getSubtype() + "\" has been purchased.");
                 } else {
                     System.out.println("Vehicle unavailable.");
                 }
