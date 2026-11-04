@@ -111,4 +111,9 @@ public abstract class Vehicle {
         +Speed+"\nFuel:   "+Fuel+"\nNumber of Seats:   "+Seats+"\nYear:   "+Year+"\nDrivetrain:   "+Drivetrain
         +"\nPrice:   "+Price+"\nAvailable:   "+Quantity;
     }
+    public String toFileString() {
+        return CarID + ";" + VehicleType + ";" + Subtype + ";" +
+                Speed + ";" + Fuel + ";" + Seats + ";" + Year + ";" +
+                Drivetrain + ";" + Price + ";" + Quantity;
+    }
 }

@@ -41,4 +41,7 @@ public class PickupTruck extends Vehicle {
         return super.toString() +
                 "Cargo Capacity:   "+CargoCapacity+"Cargo Bed Type:   "+Cargo;
     }
+    public String toFileString(){
+        return super.toFileString() + ";" + CargoBedType + ";" + CargoCapacity;
+    }
 }

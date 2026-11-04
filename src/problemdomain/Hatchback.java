@@ -30,4 +30,7 @@ public class Hatchback extends Vehicle {
         return super.toString() +
                 "Hatch Type:   "+Type;
     }
+    public String toFileString(){
+        return super.toFileString() + ";" + HatchType;
+    }
 }

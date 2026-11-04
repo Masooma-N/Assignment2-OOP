@@ -30,4 +30,7 @@ public class Sedan extends Vehicle {
         return super.toString() +
                 "Trunk Size:   "+Size;
     }
+    public String toFileString(){
+        return super.toFileString() + ";" + TrunkSize;
+    }
 }

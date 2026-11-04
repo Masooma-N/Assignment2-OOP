@@ -42,4 +42,7 @@ public class Hybrid extends Vehicle {
                 "Powertrain:   "+Train+"\nElectric Range:   "+ElectricRange;
 
     }
+    public String toFileString(){
+        return super.toFileString() + ";" + Powertrain + ";" + ElectricRange;
+    }
 }
