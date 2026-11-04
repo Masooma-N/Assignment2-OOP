@@ -43,6 +43,7 @@ public class Main {
         if (choice == 1) {
             purchaseVehicle(Vehicle, input);
         } else if (choice == 2) {
+            input.nextLine();
             displayVehiclesByType(Vehicle, input);
         } else if (choice == 3) {
             input.nextLine();
@@ -85,6 +86,55 @@ public class Main {
         System.out.println("3     Display Vehicles by Type-Specific Attribute");
         System.out.println("4     Produce a Random List of Vehicles");
         System.out.println("5     Save & Exit");
+    }
+    public static void displayVehiclesByType(List<Vehicle> vehicles, Scanner input) {
+
+        System.out.println("\n1. Sedan");
+        System.out.println("2. Hatchback");
+        System.out.println("3. SUV");
+        System.out.println("4. Hybrid");
+        System.out.println("5. Pickup Truck");
+        System.out.print("Enter type of vehicle: ");
+
+        String choice = input.nextLine().trim();
+
+        boolean found = false;
+
+        for (Vehicle vehicle : vehicles) {
+
+            if (choice.equals("1") && vehicle instanceof Sedan) {
+                System.out.println(vehicle);
+                found = true;
+
+            } else if (choice.equals("2") && vehicle instanceof Hatchback) {
+                System.out.println(vehicle);
+                found = true;
+
+            } else if (choice.equals("3") && vehicle instanceof SUV) {
+                System.out.println(vehicle);
+                found = true;
+
+            } else if (choice.equals("4") && vehicle instanceof Hybrid) {
+                System.out.println(vehicle);
+                found = true;
+
+            } else if (choice.equals("5") && vehicle instanceof PickupTruck) {
+                System.out.println(vehicle);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            if (choice.equals("1") || choice.equals("2") ||
+                    choice.equals("3") || choice.equals("4") ||
+                    choice.equals("5")) {
+
+                System.out.println("No vehicles found for this type.");
+
+            } else {
+                System.out.println("Invalid vehicle type.");
+            }
+        }
     }
     public static void displayVehiclesByAttribute(
             List<Vehicle> vehicles, Scanner scanner) {
